@@ -3,15 +3,13 @@ layout: page
 title: Flutter
 ---
 
-Flutter is a new project to help developers
-build high-performance, high-fidelity,
-cross-platform mobile apps.
+Flutterはハイパフォーマンスで、高性能なクロスプラットフォームアプリケーションの開発を手助けします。
 
-_Flutter is an early-stage open-source project._
-We are still missing core features like accessibility, text input,
-localization, and more. However, you can build demos and examples
-today. We hope you try it out and send us
-[feedback](mailto:flutter-dev@googlegroups.com).
+_Flutterはアーリーステージなオープンソースプロジェクトです。_
+我々はまだアクセシビリティ、テキスト入力、ローカライズといったコアの機能を用意できていません。
+今日はまだ例としてデモをビルドすることができる程度です。
+ぜひトライしてみてください。
+[フィードバック](mailto:flutter-dev@googlegroups.com)をお待ちしています。
 
 ## Next steps
 

@@ -5,109 +5,100 @@ nav_title: Getting Started
 permalink: /getting-started/
 ---
 
-Flutter currently supports developers on Mac and Linux.
-Windows support is in the works.
+Flutterは現在MacとLinuxでの開発をサポートしています。
+Windowsのサポートは現在作業中です。
 
-To get started, we need to set up the Dart SDK.
-Flutter requires Dart SDK 1.12.2 or greater.
+まずはDart SDKが必要です。
+FlutterはDart SDKのバージョン1.12.2以上が必要です。
 
-To install the [Dart SDK](https://www.dartlang.org/downloads/):
+[Dart SDK](https://www.dartlang.org/downloads/)のインストール:
 
-- Mac: `brew tap dart-lang/dart && brew install dart`, or, if you don't
-  use homebrew, grab the [latest stable channel build](https://www.dartlang.org/downloads/archive/)
-- Linux: See [www.dartlang.org/downloads/linux.html](https://www.dartlang.org/downloads/linux.html)
-- Windows: Stay tuned, Windows support is in the works.
+- Mac: `brew tap dart-lang/dart && brew install dart` を使うか、homebrewを使わないのであれば [latest stable channel build](https://www.dartlang.org/downloads/archive/) から入手してください。
+- Linux: [www.dartlang.org/downloads/linux.html](https://www.dartlang.org/downloads/linux.html) を参照してください。
+- Windows: しばらくお待ち下さい。Windowsサポートは現在作業中です。
 
-Ensure that the `pub` executable is in your `PATH`.
+`pub` コマンドが実行可能な `PATH` になってるか確認してください。
 
-Once you have installed Dart SDK, activate the `flutter` command line
-tool and add it to your path:
+Dart SDKのインストールに成功したら、`flutter` コマンドラインツールをパスに追加して有効化します：
 
 ```
 $ pub global activate flutter
 $ export PATH=$HOME/.pub-cache/bin:$PATH
 ```
 
-Now we can use the `flutter` command to create a project named `my_app`:
+`my_app` という名前のプロジェクトを `flutter` コマンドで作ってみましょう：
 
 ```
 $ flutter init -o my_app
 ```
 
-This command creates a `my_app` directory that contains a simple demo
-app that uses [Material Design](https://www.google.com/design/spec/material-design/introduction.html).
+このコマンドは[マテリアルデザイン](https://www.google.com/design/spec/material-design/introduction.html)を使った
+簡単なデモアプリを `my_app` ディレクトリに作成します。
 
-The code for your app is in `my_app/lib/main.dart`. Execution starts in
-the `main` function, which uses `runApp` to run a `MaterialApp` widget.
-The `MaterialApp` widget is configured with a route map, with one entry
-for every screen of your app. In this case, there's only one screen, the
-home screen named `/`, which builds a `FlutterDemo` component.
+デモアプリのコードが `my_app/lib/main.dart` にあります。
+`runApp` を使って `MaterialApp` ウィジェットを実行する `main` ファンクションから処理が開始されます。
+`MaterialApp` ウィジェットはアプリの各画面毎に1つのエントリをもつルートマップによって構成されています。
+今回の場合 `/` と名前がつけられた `FlutterDemo` コンポーネントをビルドする1つのホーム画面だけが設定されています。
 
-To learn more about how to build apps with Flutter, please see the
-[tutorial](/tutorial/).
+Flutterでアプリケーションのビルドについてもっと知りたい場合は [tutorial](/tutorial/) をご覧ください。
 
-Setting up your Android device
+Androidデバイスのセットアップ
 ------------------------------
 
-Currently Flutter requires an Android device running the KitKat (or newer)
-version of the Android operating system.
+現在のFlutterはKitkat（かそれ以降の）バージョンのAndroidOSが動いているAndroidデバイスが必要です。
 
- - Install the `adb` tool from the [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools):
+ - `adb` ツールを [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools) からインストールします:
   - Mac: `brew install android-platform-tools`
   - Linux: `sudo apt-get install android-tools-adb`
-    - If the version of `adb` provided by your Linux distribution is too old,
-      you might need to [install the Android SDK manually](https://developer.android.com/sdk/installing/index.html?pkg=tools).
+    - もしあなたが使っているLinuxディストリビューションが提供する `adb` のバージョンがすごく古い場合は、
+      [Android SDK を手動でインストールする](https://developer.android.com/sdk/installing/index.html?pkg=tools) 必要があるかもしれません。
+ 
+ - あなたのAndroiデバイスの `設定 > 端末情報` を開いて `ビルド番号` の欄を7回タップして開発者モードを有効にしてください 
 
- - Enable developer mode on your device by visiting `Settings > About phone` and
-   tapping the `Build number` field seven times.
+ - `設定 > 開発者向けオプション` から `USBデバッグ` を有効化してください。
+  - （訳注: 原文ではAndroid debuggingとなっておりこれがどの設定を指すのか分かりませんが、前後の文章からUSBデバッグの可能性が高いです)
 
- - Enable `Android debugging` in `Settings > Developer options`.
+- USBケーブルを使ってパソコンとAndroidデバイスを接続します。
+  Androidデバイスにプロンプトが表示されたらパソコンがAndroidデバイスにアクセスできるように認証を行ってください。
 
- - Using a USB cable, plug your phone into your computer. If prompted on your
-   device, authorize your computer to access your device.
-
-Running a Flutter application
+Flutterアプリケーションの実行
 -----------------------------
 
-You can use the `flutter` command to run Flutter apps on your devices. First,
-change directories to the root of your apps (i.e., the same directory that
-contains the `pubspec.yaml` file).
+AndroidデバイスでFlutterアプリケーションを動かすのに `flutter` コマンドを使います。
+まず、デモアプリのディテクトリ（ `pubspec.yaml がある階層です）に移動します。
 
-To start your app, use the `start` command:
+そして `start` コマンドでアプリケーションを開始します。
 
 ```
 $ flutter start
 $ flutter logs
 ```
 
-The `logs` command lets you see textual output from your app, including `print`
-statements and unhandled exceptions. To avoid confusion from old log messages,
-you might want to use `flutter logs --clear` to clear the logs between runs.
+`logs` コマンドは、`print` 文やハンドルしてない例外などのアプリケーションからの出力を見ることができます。
+古いメッセージに混乱しないように `flutter logs --clear` を使うことも可能です。
 
 Getting Started with Atom
 -------------------------
 
-Flutter uses [Atom](https://atom.io/) as its IDE. You can use any editor with
-our command-line tools to develop Flutter applications. However, we're also
-developing Flutter specific plugins for Atom in order to deliver a top-of-the
-line development experience.
+Flutterは [Atom](https://atom.io/) をIDEとして使えますし、
+コマンドラインツールを使うことで任意のエディタでFlutterアプリケーションを開発することができます。
+しかし我々はまだ最高の開発体験をお届けするためにAtomのFlutterプラグインを開発している最中です。
 
-For instructions on installing Atom and our Flutter plugin, see
-[dart-atom.github.io/dartlang](http://dart-atom.github.io/dartlang/).
+AtomとFlutterプラグインをインストールする手順は
+[dart-atom.github.io/dartlang](http://dart-atom.github.io/dartlang/)を参照してください。
 
 Debugging
 ---------
 
-Flutter uses [Observatory](https://www.dartlang.org/tools/observatory/) for
-debugging and profiling. While running your app, you can access Observatory
-by navigating your web browser to [http://localhost:8181/](http://localhost:8181/).
+Flutterはデバッグとプロファイリングのために [Observatory](https://www.dartlang.org/tools/observatory/) を使っています。
+アプリを起動しているあいだ、ブラウザで [http://localhost:8181/](http://localhost:8181/) から Observatory にアクセスできます。
 
-Building a standalone APK
+スタンドアロンなAPKをビルドする
 -------------------------
 
-Although it is possible to build a standalone APK containing your application,
-doing so right now is difficult. If you're feeling brave, you can see how we
-build the `Stocks.apk` in
-[examples/stocks](https://github.com/flutter/flutter/tree/master/examples/stocks).
-Eventually we plan to make this much easier and support platforms other than
-Android, but that work still in progress.
+あなたのアプリケーションを含むスタンドアロンなAPKをビルドする事は可能ではありますが、今はまだ難しいです。
+もしあなたが勇敢なら [examples/stocks](https://github.com/flutter/flutter/tree/master/examples/stocks) から
+我々が `Stocks.apk` をどのようにビルドしたのか見ることができます。
+
+最終的にはこれらの作業はもっと簡単に、そしてAndroid以外のプラットフォームもサポートする予定ですが、
+今はまだ作業中です。
