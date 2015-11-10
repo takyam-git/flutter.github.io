@@ -2,7 +2,7 @@
 title: Flutter
 email: flutter-dev@googlegroups.com
 email_name: flutter-dev@
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/flutter.github.io/" # the subpath of your site, e.g. /blog/
 url: "http://flutter.io"
 github_username: takyam-git
 
