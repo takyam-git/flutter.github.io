@@ -5,40 +5,34 @@ nav_title: FAQ
 permalink: /faq/
 ---
 
-## What does Flutter do?
+## Flutterは何ができるんですか？
 
-Flutter gives developers an easy and productive way to build and deploy
-cross-platform, high-performance mobile apps on both Android and iOS.
+Flutterは開発者に、AndroidとiOS両方のクロスプラットフォームでハイパフォーマンスなアプリの、
+ビルドやデプロイを行う簡単で生産的な方法を提供します。
 
-Flutter gives users beautiful, fast, and jitter-free app experiences.
+Flutterはユーザーに、美しく、高速で、イライラしないアプリケーション体験を提供します。
 
-## What does Flutter provide?
+## Flutterは何を提供していますか？
 
-Flutter has three main components:
+Flutterは3つのメインコンポーネントを持っています:
 
-* a heavily optimized, mobile-first 2D rendering engine (with excellent support
-for text)
-* a functional-reactive framework (optional, you can bring-your-own
-framework)
-* a set of Material Design widgets (optional, you can bring-your-own
-widgets), libraries, tools, and a plugin for Atom
+* 強く最適化されたモバイルファーストな2Dレンダリングエンジン(特にテキストのサポートに優れています)
+* 機能的(functional)で反応の良い(reactive)フレームワーク(これは任意で、あなたの好きなフレームワークを利用できます)
+* マテリアルデザインのウィジェットのセット(これは任意で、あなたの好きなウィジェットを利用できます)、ライブラリ、ツール、そしてAtomのプラグイン。
 
-## What makes Flutter unique?
+## Flutterはどこがユニークですか？
 
-Flutter is different than most other options for building cross-platform
-mobile apps because Flutter uses neither WebView nor the OEM widgets
-that shipped with the device. Instead, Flutter uses its own high-performance
-rendering engine to draw widgets.
+Flutterが他のモバイルクロスプラットフォームアプリと最も異なる点は、
+WebViewもデバイス付属のOEMウィジェットも利用していないということです。
+代わりに独自のハイパフォーマンスなレンダリングエンジンをウィジェットの描画に利用しています。
 
-Flutter also offers developers a highly productive and fast development
-experience, fast runtime and engine performance, and beautifully designed
-widgets that make for beautiful apps.
+Flutterは開発者に高い生産性と高速な開発体験、高速なランタイムとエンジン性能、
+そして美しいアプリを作るための美しいデザインのウィジェットを提供します。
 
-## Why would I want to invest in learning Flutter?
+## なぜFlutterを学んだほうが良いのですか？
 
-Flutter is an easy way to use a single codebase to deliver beautiful mobile
-apps that run on both Android and iOS. Flutter gives developers quick
-edit/debug cycles for an enjoyable low-friction workflow.
+FlutterはAndroidとiOSの両方で動く美しいアプリを、ひとつのコードベースから扱う簡単な方法です。
+Flutterは 編集/デバッグ のサイクルを楽しく、抵抗のないワークフローで開発者に提供します。
 
 ## What are Flutter's guiding principles?
 
@@ -66,9 +60,9 @@ jank-free apps. Which leads to:
 * _Fidelity_ - Everyone deserves precise, beautiful,
 delightful mobile app experiences.
 
-## How is Flutter related to Sky?
+## FlutterとSkyはどのような関係ですか？
 
-Sky was the codename of an earlier version of Flutter.
+Skyは初期のFlutterのコードネームです。
 
 ## What devices and OS versions does Flutter run on?
 
@@ -96,18 +90,18 @@ The engine's C/C++ code is compiled with LLVM, and any Dart code is AOT-compiled
 into native code. The app runs using the native instruction set (no interpreter
 is involved).
 
-## Does Flutter run on the web?
+## FlutterはWEB上で動作しますか？
 
-No. We do not plan to provide a web version of Flutter.
+いいえ。FlutterのWEBバージョンは現在予定されていません。
 
-## What operating systems can I use to build a Flutter app?
+## FlutterアプリをビルドするにはどのOSが必要ですか？
 
-Flutter supports development on Linux and Mac. Windows support is planned.
+FlutterはLinuxとMacをサポートしています。Windowsサポートは計画段階です。
 
-## What kinds of apps can I build with Flutter?
+## どのような種類のアプリをFlutterで作ることができますか？
 
-Flutter is optimized for 2D mobile apps that want to run on both Android and iOS.
-Apps that use Material Design are particularly well suited for Flutter.
+FlutterはAndroidとiOSの両方で動作する2Dアプリに最適化されています。
+マテリアルデザインを利用するアプリは特にFlutter向きです。
 
 ## What kind of app performance can I expect?
 
