@@ -8,6 +8,8 @@ permalink: /getting-started/
 Flutterは現在MacとLinuxでの開発をサポートしています。
 Windowsのサポートは現在作業中です。
 
+## まずは開発環境をセットアップしましょう
+
 まずはDart SDKが必要です。
 FlutterはDart SDKのバージョン1.12.2以上が必要です。
 
@@ -19,14 +21,34 @@ FlutterはDart SDKのバージョン1.12.2以上が必要です。
 
 `pub` コマンドが実行可能な `PATH` になってるか確認してください。
 
-Dart SDKのインストールに成功したら、`flutter` コマンドラインツールをパスに追加して有効化します：
+## コードを手に入れましょう
+
+Flutterのレポジトリから `alpha` ブランチをcloneします:
 
 ```
-$ pub global activate flutter
-$ export PATH=$HOME/.pub-cache/bin:$PATH
+$ git clone https://github.com/flutter/flutter.git -b alpha
 ```
 
-`my_app` という名前のプロジェクトを `flutter` コマンドで作ってみましょう：
+我々はFlutterの改善のために定期的に `alpha` ブランチをアップデートします。
+上で作成した `flutter` ディレクトリで `git pull` することで、
+あなたのローカル環境もアップデートされるでしょう。
+
+## PATHを設定しましょう
+
+Flutterレポジトリをcloneしたら、Flutterのスクリプトやツールを使えるようにするために、
+PATHをセットしましょう。
+
+```
+$ export PATH=`pwd`/flutter/bin:$PATH
+```
+
+## はじめてのサンプルアプリを作ってみましょう
+
+`bin` ディレクトリが PATH に追加されたので、
+プロジェクトを作るための `flutter` コマンドを使えるようになりました。
+
+次の例は `my_app` とよばれる、新規のFlutterアプリケーションを現在のディレクトリに作成します:
+
 
 ```
 $ flutter init -o my_app
@@ -36,16 +58,11 @@ $ flutter init -o my_app
 簡単なデモアプリを `my_app` ディレクトリに作成します。
 
 デモアプリのコードが `my_app/lib/main.dart` にあります。
-`runApp` を使って `MaterialApp` ウィジェットを実行する `main` ファンクションから処理が開始されます。
-`MaterialApp` ウィジェットはアプリの各画面毎に1つのエントリをもつルートマップによって構成されています。
-今回の場合 `/` と名前がつけられた `FlutterDemo` コンポーネントをビルドする1つのホーム画面だけが設定されています。
-
 Flutterでアプリケーションのビルドについてもっと知りたい場合は [tutorial](/tutorial/) をご覧ください。
 
-Androidデバイスのセットアップ
-------------------------------
+## Androidデバイスのセットアップ
 
-現在のFlutterはKitkat（かそれ以降の）バージョンのAndroidOSが動いているAndroidデバイスが必要です。
+現在のFlutterはJelly Beanかv16か4.1.x以降のAndroidOSが動いているAndroidデバイスが必要です。
 
  - `adb` ツールを [Android SDK](https://developer.android.com/sdk/installing/index.html?pkg=tools) からインストールします:
   - Mac: `brew install android-platform-tools`
@@ -61,8 +78,7 @@ Androidデバイスのセットアップ
 - USBケーブルを使ってパソコンとAndroidデバイスを接続します。
   Androidデバイスにプロンプトが表示されたらパソコンがAndroidデバイスにアクセスできるように認証を行ってください。
 
-Flutterアプリケーションの実行
------------------------------
+## Flutterアプリケーションの実行
 
 AndroidデバイスでFlutterアプリケーションを動かすのに `flutter` コマンドを使います。
 まず、デモアプリのディテクトリ（ `pubspec.yaml がある階層です）に移動します。
@@ -77,8 +93,7 @@ $ flutter logs
 `logs` コマンドは、`print` 文やハンドルしてない例外などのアプリケーションからの出力を見ることができます。
 古いメッセージに混乱しないように `flutter logs --clear` を使うことも可能です。
 
-Getting Started with Atom
--------------------------
+## Getting Started with Atom
 
 Flutterは [Atom](https://atom.io/) をIDEとして使えますし、
 コマンドラインツールを使うことで任意のエディタでFlutterアプリケーションを開発することができます。
@@ -87,14 +102,24 @@ Flutterは [Atom](https://atom.io/) をIDEとして使えますし、
 AtomとFlutterプラグインをインストールする手順は
 [dart-atom.github.io/dartlang](http://dart-atom.github.io/dartlang/)を参照してください。
 
-Debugging
----------
+## デバッグとプロファイリング
 
 Flutterはデバッグとプロファイリングのために [Observatory](https://www.dartlang.org/tools/observatory/) を使っています。
 アプリを起動しているあいだ、ブラウザで [http://localhost:8181/](http://localhost:8181/) から Observatory にアクセスできます。
 
-スタンドアロンなAPKをビルドする
--------------------------
+## Flutterを新しいバージョンにアップグレードする
+
+もしFlutterをアップデートしたい場合、あなたのアプリケーションのルートディレクトリ( `pubspec.yaml` ファイルがある場所です )で、
+`flutter upgrade` コマンドを使うことができます。
+
+```
+$ flutter upgrade
+```
+
+(もしあなたが `upgrade` コマンドを持たない古いバージョンの `flutter` を使っている場合、
+まず先にcloneしたFlutterのレポジトリで `git pull` する必要があります。)
+
+## スタンドアロンなAPKをビルドする
 
 あなたのアプリケーションを含むスタンドアロンなAPKをビルドする事は可能ではありますが、今はまだ難しいです。
 もしあなたが勇敢なら [examples/stocks](https://github.com/flutter/flutter/tree/master/examples/stocks) から

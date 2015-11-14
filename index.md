@@ -3,7 +3,7 @@ layout: page
 title: Flutter
 ---
 
-Flutterはハイパフォーマンスで、高性能なクロスプラットフォームアプリケーションの開発を手助けします。
+Flutterはたったひとつのコードから、ハイパフォーマンスで、高性能な、iOSとAndroidアプリの開発を行えます。
 
 _Flutterはアーリーステージなオープンソースプロジェクトです。_
 我々はまだアクセシビリティ、テキスト入力、ローカライズといったコアの機能を用意できていません。
@@ -21,5 +21,6 @@ _Flutterはアーリーステージなオープンソースプロジェクトで
 ## See also
 
  - [Architecture diagram](https://docs.google.com/presentation/d/1cw7A4HbvM_Abv320rVgPVGiUP2msVs7tfGbkgdrTy0I/edit?usp=sharing)
- - [github.com/flutter](https://github.com/flutter/engine/)
+ - [Source on GitHub](https://github.com/flutter/flutter)
+ - [Issue tracker](https://github.com/flutter/flutter/issues)
  - [FAQ](faq)
