@@ -5,40 +5,34 @@ nav_title: FAQ
 permalink: /faq/
 ---
 
-## What does Flutter do?
+## Flutterは何ができるんですか？
 
-Flutter gives developers an easy and productive way to build and deploy
-cross-platform, high-performance mobile apps on both Android and iOS.
+Flutterは開発者に、AndroidとiOS両方のクロスプラットフォームでハイパフォーマンスなアプリの、
+ビルドやデプロイを行う簡単で生産的な方法を提供します。
 
-Flutter gives users beautiful, fast, and jitter-free app experiences.
+Flutterはユーザーに、美しく、高速で、イライラしないアプリケーション体験を提供します。
 
-## What does Flutter provide?
+## Flutterは何を提供していますか？
 
-Flutter has three main components:
+Flutterは3つのメインコンポーネントを持っています:
 
-* a heavily optimized, mobile-first 2D rendering engine (with excellent support
-for text)
-* a functional-reactive framework (optional, you can bring-your-own
-framework)
-* a set of Material Design widgets (optional, you can bring-your-own
-widgets), libraries, tools, and a plugin for Atom
+* 強く最適化されたモバイルファーストな2Dレンダリングエンジン(特にテキストのサポートに優れています)
+* 機能的(functional)で反応の良い(reactive)フレームワーク(これは任意で、あなたの好きなフレームワークを利用できます)
+* マテリアルデザインのウィジェットのセット(これは任意で、あなたの好きなウィジェットを利用できます)、ライブラリ、ツール、そしてAtomのプラグイン。
 
-## What makes Flutter unique?
+## Flutterはどこがユニークですか？
 
-Flutter is different than most other options for building cross-platform
-mobile apps because Flutter uses neither WebView nor the OEM widgets
-that shipped with the device. Instead, Flutter uses its own high-performance
-rendering engine to draw widgets.
+Flutterが他のモバイルクロスプラットフォームアプリと最も異なる点は、
+WebViewもデバイス付属のOEMウィジェットも利用していないということです。
+代わりに独自のハイパフォーマンスなレンダリングエンジンをウィジェットの描画に利用しています。
 
-Flutter also offers developers a highly productive and fast development
-experience, fast runtime and engine performance, and beautifully designed
-widgets that make for beautiful apps.
+Flutterは開発者に高い生産性と高速な開発体験、高速なランタイムとエンジン性能、
+そして美しいアプリを作るための美しいデザインのウィジェットを提供します。
 
-## Why would I want to invest in learning Flutter?
+## なぜFlutterを学んだほうが良いのですか？
 
-Flutter is an easy way to use a single codebase to deliver beautiful mobile
-apps that run on both Android and iOS. Flutter gives developers quick
-edit/debug cycles for an enjoyable low-friction workflow.
+FlutterはAndroidとiOSの両方で動く美しいアプリを、ひとつのコードベースから扱う簡単な方法です。
+Flutterは 編集/デバッグ のサイクルを楽しく、抵抗のないワークフローで開発者に提供します。
 
 ## What are Flutter's guiding principles?
 
@@ -66,22 +60,13 @@ jank-free apps. Which leads to:
 * _Fidelity_ - Everyone deserves precise, beautiful,
 delightful mobile app experiences.
 
-## What are the origins of Flutter?
+## FlutterとSkyはどのような関係ですか？
 
-Back in 2014, some engineers in Google took a step back to ask, "What would a
-modern mobile-first rendering engine look like?" Without worrying about
-backwards compatibility, or desktop concerns, or legacy constraints, they
-started coding a new engine named Sky. Encouraged by some of their initial
-performance measurements, they decided to make the experiment into a real
-project and renamed it Flutter.
-
-## Does Google ship any apps built with Flutter?
-
-Google has not publicly released any apps built with Flutter.
+Skyは初期のFlutterのコードネームです。
 
 ## What devices and OS versions does Flutter run on?
 
-Flutter apps run on Android KitKat (or newer), and iOS 5 (or newer).
+Flutter apps run on Android Jelly Bean, v16, 4.1.x or newer, and iOS 5 or newer.
 We test on a variety of low-end to high-end phones and tablets, but we don't yet
 have an official device compatibility guarantee.
 
@@ -105,18 +90,18 @@ The engine's C/C++ code is compiled with LLVM, and any Dart code is AOT-compiled
 into native code. The app runs using the native instruction set (no interpreter
 is involved).
 
-## Does Flutter run on the web?
+## FlutterはWEB上で動作しますか？
 
-No. We do not plan to provide a web version of Flutter.
+いいえ。FlutterのWEBバージョンは現在予定されていません。
 
-## What operating systems can I use to build a Flutter app?
+## FlutterアプリをビルドするにはどのOSが必要ですか？
 
-Flutter supports development on Linux and Mac. Windows support is planned.
+FlutterはLinuxとMacをサポートしています。Windowsサポートは計画段階です。
 
-## What kinds of apps can I build with Flutter?
+## どのような種類のアプリをFlutterで作ることができますか？
 
-Flutter is optimized for 2D mobile apps that want to run on both Android and iOS.
-Apps that use Material Design are particularly well suited for Flutter.
+FlutterはAndroidとiOSの両方で動作する2Dアプリに最適化されています。
+マテリアルデザインを利用するアプリは特にFlutter向きです。
 
 ## What kind of app performance can I expect?
 
@@ -222,8 +207,8 @@ Flutter's framework and engine.
 
 Flutter apps are most commonly deployed via the mobile platform's store (such as
 Apple's App Store and Google's Play Store). We plan to deliver tools to easily
-to [generate an .ipa](https://github.com/flutter/tools/issues/168)
-and easily [generate an .apk](https://github.com/flutter/tools/issues/167).
+to [generate an .ipa](https://github.com/flutter/flutter/issues/46)
+and easily [generate an .apk](https://github.com/flutter/flutter/issues/45).
 
 ## Can I update my app over the network, outside of the Play Store?
 
@@ -265,7 +250,7 @@ approximately 400kb, necessary Java code is 330k, and there is approximately
 ## Where can I get support?
 
 If you think you've encountered a bug, please file it in our
-[issue tracker](https://github.com/flutter/engine/issues). We
+[issue tracker](https://github.com/flutter/flutter/issues). We
 encourage you to use [Stack Overflow](https://stackoverflow.com/) for "HOWTO"
 type questions. For discussions,
 please join our mailing list at
@@ -275,12 +260,12 @@ please join our mailing list at
 
 Flutter is open source, and we encourage you to contribute. You can start by
 simply filing issues for feature requests and bugs in our
-[issue tracker](https://github.com/flutter/engine/issues). You
+[issue tracker](https://github.com/flutter/flutter/issues). You
 should also join our mailing list at
 [flutter-dev@googlegroups.com](mailto:flutter-dev@googlegroups.com) and let us
 know how you're using Flutter and what you'd like to do with it. If you're
 interested in contributing code, you can start by reading our
-[Contributing guide](https://github.com/flutter/engine/blob/master/CONTRIBUTING.md).
+[Contributing guide](https://github.com/flutter/flutter/blob/master/CONTRIBUTING.md).
 
 ## Should I build my next production app with Flutter?
 
